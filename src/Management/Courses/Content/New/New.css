@@ -1,0 +1,100 @@
+.content-new-bg {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .1);
+}
+
+.content-new-main {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.content-new-title {
+    border-bottom: 2px solid #81D8D0;
+    font-size: 30px;
+    padding: 10px 30px;
+    font-weight: lighter;
+}
+
+.content-new-form {
+    padding: 20px 20px;
+}
+
+.content-new-input-group {
+    display: flex;
+}
+
+.content-new-input {
+    padding: 0;
+    height: 30px;
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+}
+
+.content-new-input:focus {
+    border: 2px solid #81D8D0;
+}
+
+.content-new-select {
+    width: 100%;
+    height: 20px;
+    outline: none;
+}
+
+.content-new-submit-btn {
+    margin-top: 20px;
+    border: 3px solid #81D8D0;
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 15px;
+    outline: none;
+}
+
+.content-new-submit-btn:hover {
+    background-color: #81D8D0;
+    color: white;
+}
+
+.content-new-ta {
+    margin: 10px 20px;
+    height: 84%;
+}
+
+.content-new-ta-title{
+    font-size: 25px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.content-new-ta-main {
+    border: 1px solid rgba(1,1,1,.3);
+    height: 100%;
+    overflow: auto;
+    padding: 10px 10px;
+}
+
+.content-new-user {
+    float: left;
+    position: relative;
+    width: 20%;
+    margin: 10px 2%;
+}
+
+.content-new-avater {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.content-new-avater-chosen {
+    box-shadow: 7px 7px 0 #81D8D0;
+}

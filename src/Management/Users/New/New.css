@@ -1,0 +1,106 @@
+.user-new-bg {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .1);
+}
+
+.user-new-main {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.user-new-title {
+    border-bottom: 2px solid #81D8D0;
+    font-size: 30px;
+    padding: 10px 30px;
+    font-weight: lighter;
+}
+
+.user-new-form {
+    padding: 30px 30px;
+}
+
+@media only screen and (min-width: 950px) {
+    .input-group-flex {
+        display: flex;
+        height: 310px;
+    }
+    
+    .input-group-left-60 {
+        width: 60%;
+        padding-right: 10px;
+    }
+
+    .input-group-right-40 {
+        width: 40%;
+    }
+
+    .text-align-center {
+        text-align: center;
+    }
+
+    .user-new-avater {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .user-new-avater {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+.input-label {
+    font-size: 25px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.input-textarea {
+    width: 100%;
+    height: 100px;
+    outline: none;
+    font-size: 20px;
+}
+
+.input-group-left-60 input {
+    padding: 0;
+    height: 30px;
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+}
+
+.input-group-left-60 input:focus {
+    border: 2px solid #81D8D0;
+}
+
+.input-select {
+    width: 100%;
+    height: 20px;
+    outline: none;
+}
+
+.user-new-submit-btn {
+    margin-top: 20px;
+    border: 3px solid #81D8D0;
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 15px;
+}
+
+.user-new-submit-btn:hover {
+    background-color: #81D8D0;
+    color: white;
+}

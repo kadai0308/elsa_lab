@@ -1,0 +1,27 @@
+{
+  "name": "elsa-lab-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.2",
+    "font-awesome": "^4.7.0",
+    "pdfjs-dist": "^1.9.568",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-dropzone": "^4.1.0",
+    "react-fontawesome": "^1.6.1",
+    "react-router": "^3.0.0",
+    "react-slick": "^0.14.8",
+    "slick-carousel": "^1.6.0",
+    "sweetalert2": "^6.6.9"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

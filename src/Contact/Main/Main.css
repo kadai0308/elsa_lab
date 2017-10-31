@@ -1,0 +1,94 @@
+.contact-main {
+    padding: 50px 10%;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.location-info {
+    width: 40%;
+}
+
+.send-message {
+    width: 60%;
+}
+
+
+.contact-title {
+    margin-top: 30px;
+    width: 40px;
+}
+
+.contact-title div {
+    height: 60%;
+    margin-bottom: 30px;
+    font-size: 30px;
+    border-bottom: solid 7px #81D8D0;
+}
+
+.address .content {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+
+.google-map {
+    width: 100%;
+}
+
+.input-group {
+    text-align: center;
+}
+
+.input {
+    width: 50%;
+    margin: 20px 0;
+    min-width: 100px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border: none;
+    border-bottom: solid 3px rgba(1, 1, 1, .5);
+    outline: none;
+    transition: .5s;
+}
+
+.input:focus {
+    border-bottom: solid 3px #81D8D0;
+}
+
+.textarea {
+    padding: 10px 10px;
+    height: 80px;
+    margin: 20px 0;
+    appearance: none;
+    text-decoration: none;
+    border: solid 3px rgba(1, 1, 1, .5);
+    outline: none;
+    resize: none;
+    width: 87%;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+.textarea:focus {
+    border: solid 3px #81D8D0;    
+}
+
+.submit-btn {
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border: solid 2px rgba(1, 1, 1, .5);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.submit-btn:hover {
+    border: solid 2px #81D8D0;   
+}

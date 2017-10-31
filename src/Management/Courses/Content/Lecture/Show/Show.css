@@ -1,0 +1,87 @@
+.lecture-show-bg {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .1);
+}
+
+.lecture-show-main {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 20px;
+    background-color: #fff;
+}
+.lecture-show-title {
+    display: flex;
+    border-bottom: 2px solid #81D8D0;
+    padding: 10px 30px;
+}
+
+.lecture-show-title-main {
+    font-weight: lighter;
+    font-size: 30px;
+    width: 80%;
+}
+
+.lecture-show-btn-group {
+    width: 20%;
+}
+
+.lecture-show-edit-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: rgba(1,1,1,.6);
+    background-color: #fff;
+    border: 2px solid #7CB5FF;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .3s;
+    outline: none;
+    text-decoration: none;
+    float: right;
+}
+
+.lecture-show-edit-btn:hover {
+    color: #fff;
+    background-color: #7CB5FF;
+}
+
+.lecture-show-delete-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 5px ;
+    font-size: 15px;
+    color: rgba(1,1,1,.6);
+    background-color: #fff;
+    border: 2px solid #FF6060;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .3s;
+    outline: none;
+    text-decoration: none;
+    float: right;
+}
+
+.lecture-show-delete-btn:hover {
+    color: #fff;
+    background-color: #FF6060;
+}
+
+.lecture-show-main-info {
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}

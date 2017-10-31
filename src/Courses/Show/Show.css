@@ -1,0 +1,124 @@
+.course-front-show-bg {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .1);
+}
+
+.course-front-show-main {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+.course-front-show-title {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.course-front-show-subTitle {
+    text-align: center;
+    font-size: 20px;   
+}
+
+.course-front-show-description {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course-front-show-decoration-line {
+    width: 10%;
+    height: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #81D8D0;
+}
+
+.course-front-show-staffs {
+    margin: 30px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course-front-show-staffs-title {
+    font-size: 25px;
+    text-align: center;
+}
+
+.course-front-show-staffs-main {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+.course-front-show-staff {
+    margin: 0 10px;
+}
+
+.course-front-show-staff-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+
+}
+
+.course-front-show-staff-image img {
+    width: 100px;
+    height: 100px;
+}
+
+.course-front-show-staff-info {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.course-front-show-lectures {
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course-front-show-content {
+    border: 1px solid rgba(1,1,1,.3);
+    margin: 10px 0;
+    padding: 20px 20px;
+    box-shadow: 1px 1px 1px rgba(1,1,1,.3);
+}
+
+.course-front-show-content-link {
+    color: black;
+    text-decoration: none;
+    line-height: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.course-front-show-content-link:hover {
+    color: #81D8D0;
+}
+
+.course-front-show-content-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.course-front-show-content-description {
+    margin: 10px 0;
+}

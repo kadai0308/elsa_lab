@@ -1,0 +1,7 @@
+.member-banner {
+  width: 100%;
+  height: 300px;
+  background-image: url('./img/img1.jpeg');
+  background-size: cover;
+  background-position: center;
+}

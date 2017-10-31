@@ -1,0 +1,91 @@
+.members {
+  width: 80%;
+  height: 400px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  box-shadow: 0px 1px 0px rgba(1,1,1,.1);
+}
+
+.members-title {
+  width: 40px;
+  height: 30%;
+}
+
+.members-title div {
+  height: 60%;
+  margin-bottom: 30px;
+  font-size: 40px;
+  letter-spacing: 5px;
+  border-bottom: solid 7px #81D8D0;
+}
+
+.members-main {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  display: flex;
+}
+
+/*.pic-mask {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 300px;
+  /*transform: skew(10deg);*/
+  /*overflow: hidden;*/
+/*}*/
+
+/*.pic-mask .img {
+  left: -50px;
+  transform: skew(-10deg);
+  width: 300px;
+  height: 300px;
+}*/
+
+.members-main .content {
+  position: relative;
+  display: flex;
+  margin: 0 4%;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-mask {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  /*background-color: rgba(129, 216, 208, .4);*/
+}
+
+.members-main .content .avatar {
+  height: 100%;
+}
+
+.members-main .title {
+  position: absolute;
+  top: -20px;
+  left: -25px;
+  width: 100%;
+  height: 100%;
+}
+
+.members-main .title span {
+  font-size: 30px;
+  padding: 0 10px;
+  font-weight: lighter;
+  background-color: rgba(129, 216, 208, 1); 
+  color: white;
+}
+
+.members-main .title .degree {
+}
+
+.members-main .name {
+  position: relative;
+  left: 70%;
+  top: 75%;
+}

@@ -1,0 +1,15 @@
+.sayings {
+  width: 80%;
+  height: 400px;
+  /*background-color: #BAE9E5;*/
+  margin-top: 50px;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+
+.saying-content {
+  line-height: 300px;
+  font-size: 30px;
+  text-align: center;
+  color: rgba(1,1,1,.5)
+}
