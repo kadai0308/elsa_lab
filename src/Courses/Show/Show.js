@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Show.css'
 import instructorImg from './teacher_avater/professor.jpg'
+import settings from '../../settings.js'
 
 class courseShow extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class courseShow extends Component {
         const course_id = this.props.params.course_id
         const content_id = this.props.params.content_id
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
         })
 

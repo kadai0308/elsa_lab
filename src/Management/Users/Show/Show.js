@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import settings from '../../../settings.js'
 // import './show.css';
 
 class userShow extends Component {
@@ -15,7 +16,7 @@ class userShow extends Component {
         const user_id = this.props.params.user_id;
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,

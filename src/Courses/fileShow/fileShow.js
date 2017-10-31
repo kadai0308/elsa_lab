@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PDFJS from 'pdfjs-dist';
 import axios from 'axios';
 import './fileShow.css'
+import settings from '../../settings.js'
 
 class lectureShow extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class lectureShow extends Component {
     componentWillMount() {
         const file_id = this.props.params.file_id
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
         })
 

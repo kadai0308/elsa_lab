@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
 import axios from 'axios';
+import settings from '../../settings.js'
 
 class Front extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Front extends Component {
         const user_id = localStorage.user_id;
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,

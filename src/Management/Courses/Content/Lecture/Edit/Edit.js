@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Edit.css'
 import Dropzone from 'react-dropzone'
 import FontAwesome from 'react-fontawesome'
+import settings from '../../../../../settings.js'
 
 class lectureEdit extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class lectureEdit extends Component {
         const lecture_id = this.props.params.lecture_id
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,
@@ -53,7 +54,7 @@ class lectureEdit extends Component {
         const lecture_id = this.props.params.lecture_id
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,
@@ -96,7 +97,7 @@ class lectureEdit extends Component {
             file_id = files[index].id
             const token = localStorage.token;
             const ins = axios.create({
-                baseURL: 'http://127.0.0.1:8000/',
+                baseURL: settings.backend_url,
                 timeout: 1000,
                 headers: {
                     Authorization: "JWT " + token,

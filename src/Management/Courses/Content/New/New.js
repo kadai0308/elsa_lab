@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './New.css'
+import settings from '../../../../settings.js'
 
 class contentNew extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class contentNew extends Component {
     componentWillMount() {
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,
@@ -58,7 +59,7 @@ class contentNew extends Component {
         const course_id = this.props.params.course_id
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,

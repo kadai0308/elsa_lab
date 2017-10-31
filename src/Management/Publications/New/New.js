@@ -5,6 +5,7 @@ import Dropzone from 'react-dropzone'
 import FontAwesome from 'react-fontawesome'
 import swal from 'sweetalert2'
 import  '../../../../node_modules/sweetalert2/dist/sweetalert2.css'
+import settings from '../../../settings.js'
 
 class publicationNew extends Component {
     constructor(props) {
@@ -44,7 +45,7 @@ class publicationNew extends Component {
         this.checkForm(event)
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,

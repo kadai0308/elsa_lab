@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './New.css'
+import settings from '../../../settings.js'
 
 class userNew extends Component {
     constructor(props) {
@@ -55,7 +56,7 @@ class userNew extends Component {
 
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,

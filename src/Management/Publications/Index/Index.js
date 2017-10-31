@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import './Index.css'
+import settings from '../../../settings.js'
 
 class publicationsIndex extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class publicationsIndex extends Component {
     componentWillMount() {
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,

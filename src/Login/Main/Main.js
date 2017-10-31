@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import settings from '../../settings.js'
 
 class loginMain extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class loginMain extends Component {
     }
 
     handleSubmit(event) {
-        axios.post('http://127.0.0.1:8000/api-token-auth/', {
+        axios.post(settings.backend_url + '/api-token-auth/', {
             username: this.state.account,
             password: this.state.password
         })
@@ -47,7 +48,7 @@ class loginMain extends Component {
     //     const token = this.readCookie('token');
 
     //     var instance = axios.create({
-    //         baseURL: 'http://127.0.0.1:8000/',
+    //         baseURL: settings.backend_url,
     //         timeout: 1000,
     //         headers: {
     //             Authorization: "JWT " + token,

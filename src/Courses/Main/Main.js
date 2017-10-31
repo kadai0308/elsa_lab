@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import digital from './img/hardware.jpeg'
 import './Main.css'
+import settings from '../../settings.js'
 
 class courseMain extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class courseMain extends Component {
     componentWillMount() {
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
         })
 

@@ -3,6 +3,7 @@ import axios from 'axios';
 import './New.css'
 import Dropzone from 'react-dropzone'
 import FontAwesome from 'react-fontawesome'
+import settings from '../../../../../settings.js'
 
 class lectureNew extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class lectureNew extends Component {
         const content_id = this.props.params.content_id
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,

@@ -3,6 +3,7 @@ import axios from 'axios';
 import swal from 'sweetalert2'
 import  '../../../../node_modules/sweetalert2/dist/sweetalert2.css'
 import './Show.css'
+import settings from '../../../settings.js'
 
 class courseShow extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class courseShow extends Component {
         const course_id = this.props.params.course_id
         const token = localStorage.token;
         const ins = axios.create({
-            baseURL: 'http://127.0.0.1:8000/',
+            baseURL: settings.backend_url,
             timeout: 1000,
             headers: {
                 Authorization: "JWT " + token,
@@ -47,7 +48,7 @@ class courseShow extends Component {
         }).then(function () {
             const token = localStorage.token;
             const ins = axios.create({
-                baseURL: 'http://127.0.0.1:8000/',
+                baseURL: settings.backend_url,
                 timeout: 1000,
                 headers: {
                     Authorization: "JWT " + token,
