@@ -35,7 +35,7 @@ class loginMain extends Component {
             localStorage.token = response.data.token;
             localStorage.user_id = user_id
             // redirect to user page
-            window.location = `http://127.0.0.1:3000/management/users`
+            window.location = `${settings.root_url}/management/users`
         })
         .catch(function (error) {
             console.log(error);
