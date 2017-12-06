@@ -20,10 +20,13 @@
 
 .member-row .pCard .label {
   color: #fff;
-  position: relative;
-  left: -40px;
+  position: absolute;
+  left: 70px;
+  bottom: 0px;
+  width: 30%;
   font-size: 30px;
   padding: 2px 5px;
   font-weight: lighter;
+  z-index: 999;
   background-color: #81D8D0;
 }

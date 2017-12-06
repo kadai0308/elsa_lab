@@ -27,10 +27,6 @@ class Template extends Component {
                 <div className="footer">
                     <div className="content">
                         <div className="copyright">© 2017 Elsa Lab Limited</div>
-                        <div className="footer-item footer-item-shadow ">Members</div>
-                        <div className="footer-item footer-item-shadow ">Members</div>
-                        <div className="footer-item footer-item-shadow ">Members</div>
-                        <div className="footer-item">Members</div>
                     </div>
                 </div>
             </div>

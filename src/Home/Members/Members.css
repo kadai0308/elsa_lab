@@ -73,6 +73,15 @@
   height: 100%;
 }
 
+.members-link {
+  text-decoration: none;
+  color: black;
+}
+
+.members-link:hover {
+  color: rgba(129, 216, 208, 1);
+}
+
 .members-main .title span {
   font-size: 30px;
   padding: 0 10px;
