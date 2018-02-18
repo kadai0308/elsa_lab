@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Main.css'
 import settings from '../../settings.js'
 
 class loginMain extends Component {
@@ -8,12 +9,22 @@ class loginMain extends Component {
         this.state = {
             account: '',
             password: '',
-            token: ''
+            message: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.testClick = this.testClick.bind(this);
+        this.renderMessage = this.renderMessage.bind(this);
+    }
+
+    renderMessage() {
+        if (this.state.message) {
+            return (
+                <div className="message">
+                    {this.state.message}
+                </div>
+            )
+        }
     }
 
     handleChange(id, event) {
@@ -25,6 +36,7 @@ class loginMain extends Component {
     }
 
     handleSubmit(event) {
+        let react_ins = this;
         axios.post(settings.backend_url + '/api-token-auth/', {
             username: this.state.account,
             password: this.state.password
@@ -35,46 +47,58 @@ class loginMain extends Component {
             localStorage.token = response.data.token;
             localStorage.user_id = user_id
             // redirect to user page
-            window.location = `${settings.root_url}/management/users`
+            if (settings.root_user_types.includes(response.data.user.profile.studentType)) {
+                window.location = `${settings.root_url}/management/users`
+            } else {
+                let url = new URL(window.location.href);
+                let redirect_url = url.searchParams.get("redirect_url");
+                if (redirect_url) {
+                    window.location = redirect_url;
+                } else {
+                    window.location = '/';
+                }
+            }
         })
         .catch(function (error) {
-            console.log(error);
+            console.log(error.response);
             // handle login error
+            if (error) {
+                // set error message or fade out after 2s.
+                react_ins.setState({message: 'Account or Password error.'}, 
+                    () => setTimeout(() => react_ins.setState({message:''}),2000))
+            }
         })
         event.preventDefault();
     }
 
-    // testClick(event) {
-    //     const token = this.readCookie('token');
-
-    //     var instance = axios.create({
-    //         baseURL: settings.backend_url,
-    //         timeout: 1000,
-    //         headers: {
-    //             Authorization: "JWT " + token,
-    //         }
-    //     });
-
-    //     instance.get('users/3/')
-    //     .then(function (response) {
-    //         console.log(response);
-    //     })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //     })
-    // }
-
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    Account:
-                    <input type="text"  value={this.state.account} onChange={(e) => this.handleChange('account', e)} />
-                    Password:
-                    <input type="text" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
-                    <input type="submit" value="Submit" />
-                </form>
+            <div className='bg'>
+                {this.renderMessage()}
+                <div className="login-main-card">
+                    <div className="login-title">Login</div>
+                    <div className="login-form">
+                        <div className="login-form-group">
+                            <input className='login-form-input' placeholder='Account' type="text" value={this.state.account} onChange={(e) => this.handleChange('account', e)} />
+                        </div>
+                        <div className="login-form-group">
+                            <input className='login-form-input' placeholder='Password' type="password" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
+                        </div>
+                        {/*<div className="login-form-group flex">
+                            <div className="box">
+                                <div onClick={(e) => this.handleSubmit(e)} href="#" className="login-form-button submit">Submit</div>
+                            </div>
+                            <div className="box">
+                                <a href="/register"><div href="/register" className="login-form-button">Register</div></a>
+                            </div>
+                        </div>*/}
+                        <div className="login-form-group">
+                            <div onClick={(e) => this.handleSubmit(e)} href="#" className="login-form-button submit">Submit</div>
+                            <a className='link' href="/register"><div href="/register" className="login-form-button">Register</div></a>
+                        </div>
+                    </div>
                 {/*<button onClick={this.testClick}>test</button>*/}
+                </div>
             </div>
         );
     }

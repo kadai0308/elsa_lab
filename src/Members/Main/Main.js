@@ -18,9 +18,6 @@ class membersMain extends Component {
     const ins = axios.create({
       baseURL: settings.backend_url,
       timeout: 1000,
-      headers: {
-          Authorization: "JWT " + token,
-      }
     })
 
     ins.get('users')

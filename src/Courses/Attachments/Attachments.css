@@ -1,0 +1,17 @@
+.attachment-title {
+    font-size: 2em;
+    margin: 10px 10px;
+
+}
+
+.slide-thumbnail {
+    text-align: center;
+    width: 150px;
+    margin: 10px 10px;
+    border: solid 1px rgba(1,1,1,.4);
+    box-shadow: 1px 1px 5px rgba(1,1,1,.3);
+}
+
+.attachment-download-link {
+    margin: 10px 10px;
+}

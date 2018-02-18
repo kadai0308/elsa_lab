@@ -37,7 +37,7 @@
 .main {
   position: relative;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .footer {
@@ -84,6 +84,7 @@
   text-align: center;
   transition: all .5s ease;
 }
+
 .fkClick {
   position: absolute;
   right: 0px;

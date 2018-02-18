@@ -6,9 +6,11 @@ import Home from './Home/Home'
 import Members from './Members/Members'
 import Courses from './Courses/Courses'
 import courseFrontShow from './Courses/Show/Show'
-import fileShow from './Courses/fileShow/fileShow'
+import Attachments from './Courses/Attachments/Attachments'
+import attachmentShow from './Courses/Attachments/Show/Show'
 import Publications from './Publications/Publications'
 import Contact from './Contact/Contact'
+import Register from './Register/Register'
 import Login from './Login/Login'
 import Logout from './Logout/Logout'
 import publicationIndex from './Management/Publications/Index/Index'
@@ -38,9 +40,11 @@ ReactDOM.render((
       <Route path="/members" component={Members} />
       <Route path="/courses" component={Courses} />
       <Route path="/courses(/:course_id)/contents(/:content_id)" component={courseFrontShow} />
-      <Route path="/courses(/:course_id)/contents(/:content_id)/lectures(/:lecture_id)/files(/:file_id)" component={fileShow} />
+      <Route path="/courses(/:course_id)/contents(/:content_id)/lectures(/:lecture_id)/files(/:file_id)" component={Attachments} />
+      <Route path="/courses(/:course_id)/contents(/:content_id)/lectures(/:lecture_id)/files(/:file_id)/pages(/:page_num)" component={attachmentShow} />
       <Route path="/publications" component={Publications} />
       <Route path="/contact" component={Contact} />
+      <Route path="/register" component={Register} />
       <Route path="/login" component={Login} />
       <Route path="/logout" component={Logout} />
       <Route path="/management" component={userIndex} />

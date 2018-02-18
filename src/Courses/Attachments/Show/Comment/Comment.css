@@ -1,0 +1,50 @@
+.comments-title {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.comment {
+    padding: 10px 0;
+    margin: 10px 0;
+    border-bottom: dashed 1px rgba(1,1,1,1);
+    color: #505050;
+    font-family: open-sans, sans-serif;
+}
+
+.comment-author {
+    margin-bottom: 10px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.comment-content {
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: 400;
+    white-space: pre-wrap;
+    line-height: 25px;
+}
+
+.comment-time {
+    font-style: italic;
+    font-size: 11pt;
+    font-weight: 400;
+}
+
+.comment-notice {
+    margin: 10px 0;
+}
+
+.comment-form {
+    margin: 10px 0;
+}
+
+.comment-input-textarea {
+    width: 100%;
+    font-size: 18px;
+}
+
+.comment-input-submit {
+    width: 50px;
+    height: 30px;
+}

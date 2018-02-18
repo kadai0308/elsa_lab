@@ -11,7 +11,6 @@ const Home = (props) => (
     <Carousel />
     <InfoCard />
     <News />
-    <Members />
   </div>
 )
 
