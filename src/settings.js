@@ -1,5 +1,5 @@
 const settings = {
-    root_url: 'http://elsa.cs.nthu.edu.tw/',
+    root_url: 'http://elsa.cs.nthu.edu.tw',
     backend_url: 'http://140.114.75.146:8000',
     // root_url: 'http://127.0.0.1:3000',
     // backend_url: 'http://127.0.0.1:8000',
