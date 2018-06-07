@@ -3,6 +3,7 @@ import { Link, IndexLink } from 'react-router';
 import axios from 'axios';
 import settings from '../../settings.js'
 import FontAwesome from 'react-fontawesome'
+import raleway from '../../../Raleway/Raleway-Medium.ttf';
 
 class Front extends Component {
     constructor(props) {
@@ -66,12 +67,13 @@ class Front extends Component {
                 name = this.state.user.username
             }
             state = (
-                <div className="item url line-height100">
+                <div className="url">
                     <input className="fkClick" />
-                    <FontAwesome 
+                    {/* <FontAwesome 
                         className='user-icon'
                         name='user-circle-o'
-                    />
+                    /> */}
+                    <div className="url-box">Hi, {name}</div>
                     <div className="dropDown">
                         <div className="dropDown-main">
                             <a href="#"><div className="dropDown-item">個人資料</div></a>
@@ -82,17 +84,32 @@ class Front extends Component {
                 </div>
             )
         } else {
-            state = <Link to='/login' className="item url">Login</Link>
+            state = <Link to='/login' className="url"><div className="url-box">Login</div></Link>
         }
 
         return (
             <div className="header">
-                <IndexLink to='/' className='brand'>Elsa Lab</IndexLink>
-                <Link to='#' className="item url">Members</Link>
-                <Link to='/courses' className="item url">Courses</Link>
-                <Link to='/publications' className="item url">Publications</Link>
-                <Link to='/contact' className="item url">Contact</Link>
-                {state}
+                <div className='brand-container'>
+                    <div className="brand-image">
+                        <IndexLink to='/' className='brand'>Elsa Lab</IndexLink>
+                    </div>
+                </div>
+                <div className="urls">
+                    <div className="urls-container">    
+                        {/* <Link to='#' className="url">
+                            <div className="url-box url-box-border">
+                                Members
+                            </div>
+                        </Link> */}
+                        <Link to='/courses' className="url">
+                            <div className="url-box url-box-border">Courses</div>
+                        </Link>
+                        <Link to='/publications' className="url"><div className="url-box url-box-border">Publications</div></Link>
+                        <Link to='/news' className="url"><div className="url-box url-box-border">News</div></Link>
+                        <Link to='/contact' className="url"><div className="url-box url-box-border">Contact</div></Link>
+                        {state}
+                    </div>
+                </div>
             </div>
         )
     }

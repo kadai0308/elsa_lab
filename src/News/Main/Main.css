@@ -1,0 +1,37 @@
+.news-block {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    padding-bottom: 50px;
+    box-shadow: 0px 1px 0px rgba(1,1,1,.1);
+}
+
+.news-frame {
+    width: 100%;
+    display: flex;
+}
+
+.news-img {
+    position: relative;
+    width: 40%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.news-main {
+    width: 60%;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.news-main .news-title {
+    width: 100%;
+    font-size: 25px;
+}
+  
+.news-main .news-content {
+    width: 100%;
+    line-height: 30px;
+}

@@ -3,6 +3,7 @@ import './Comment.css';
 import axios from 'axios';
 import settings from '../../../../settings.js';
 import moment from 'moment';
+import showdown from 'showdown';
 
 class Comment extends Component {
     constructor(props) {
@@ -95,16 +96,33 @@ class Comment extends Component {
         return formatted
     }
 
+    newLine(event) {
+        if (event.which == 13 && event.shiftKey) {
+            event.target.rows = event.target.rows + 1;
+        }
+        if (event.keyCode == 8 && event.target.rows > 1) {
+            event.target.rows = event.target.rows - 1;   
+        }
+        if (event.which == 13) {
+
+        }
+    }
+
     render() {
         let comments;
+        let converter = new showdown.Converter()
         if (this.state.comments) {
             comments = this.state.comments.map((comment) => (
                     <div className="comment">
                         <div className="comment-author">
                             {comment.author.username} ( {comment.author.profile.student_id} )
                         </div>
-                        <pre className="comment-content">{comment.content}</pre>
+                        <div dangerouslySetInnerHTML={{__html: converter.makeHtml(comment.content)}} />
                         <div className="comment-time">at {this.timeFormat(comment.created_at)}</div>
+                        <div>
+                            {/* reply
+                            <textarea className="" name={comment.id} cols="30" rows="1" placeholder='' onKeyDown={this.newLine}></textarea> */}
+                        </div>
                     </div>
                 ))
         }

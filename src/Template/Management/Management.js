@@ -26,11 +26,28 @@ class Management extends Component {
 
         return (
             <div className="header">
-                <IndexLink to='/' className='brand'>Elsa Lab</IndexLink>
-                <Link to='/management/users' className="item url">Users</Link>
-                <Link to='/management/courses' className="item url">Courses</Link>
-                <Link to='/management/Publications' className="item url">Publications</Link>
-                <Link to='#' onClick={this.logOut} className="item url">Log out</Link>
+                <div className='brand-container'>
+                    <div className="brand-image">
+                        <IndexLink to='#' className='brand'>Elsa Lab Control Panel</IndexLink>
+                    </div>
+                </div>
+                <div className="urls-control-panel">
+                    <div className="urls-container">    
+                        <Link to='/management/users' className="url">
+                            <div className="url-box url-box-control-panel url-box-border">
+                                Users
+                            </div>
+                        </Link>
+                        <Link to='/management/courses' className="url">
+                            <div className="url-box url-box-control-panel url-box-border">Courses</div>
+                        </Link>
+                        <Link to='/management/Publications' className="url"><div className="url-box url-box-control-panel url-box-border">Publications</div></Link>
+                        <Link to='/management/News' className="url"><div className="url-box url-box-control-panel url-box-border">News</div></Link>
+                        <Link to='/' className="url">
+                            <div className="url-box url-box-control-panel">Exit</div>
+                        </Link>
+                    </div>
+                </div>
             </div>
         )
     }

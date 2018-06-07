@@ -9,10 +9,14 @@ import courseFrontShow from './Courses/Show/Show'
 import Attachments from './Courses/Attachments/Attachments'
 import attachmentShow from './Courses/Attachments/Show/Show'
 import Publications from './Publications/Publications'
+import News from './News/News'
 import Contact from './Contact/Contact'
 import Register from './Register/Register'
 import Login from './Login/Login'
 import Logout from './Logout/Logout'
+import newsIndex from './Management/News/Index/Index'
+import newsNew from './Management/News/New/New'
+import newsShow from './Management/News/Show/Show'
 import publicationIndex from './Management/Publications/Index/Index'
 import publicationNew from './Management/Publications/New/New'
 import publicationShow from './Management/Publications/Show/Show'
@@ -43,11 +47,15 @@ ReactDOM.render((
       <Route path="/courses(/:course_id)/contents(/:content_id)/lectures(/:lecture_id)/files(/:file_id)" component={Attachments} />
       <Route path="/courses(/:course_id)/contents(/:content_id)/lectures(/:lecture_id)/files(/:file_id)/pages(/:page_num)" component={attachmentShow} />
       <Route path="/publications" component={Publications} />
+      <Route path="/news" component={News} />
       <Route path="/contact" component={Contact} />
       <Route path="/register" component={Register} />
       <Route path="/login" component={Login} />
       <Route path="/logout" component={Logout} />
       <Route path="/management" component={userIndex} />
+      <Route path="/management/news" component={newsIndex} />
+      <Route path="/management/news/new" component={newsNew} />
+      <Route path="/management/news/:news_id" component={newsShow} />
       <Route path="/management/publications" component={publicationIndex} />
       <Route path="/management/publications/new" component={publicationNew} />
       <Route path="/management/publications/:publication_id" component={publicationShow} />

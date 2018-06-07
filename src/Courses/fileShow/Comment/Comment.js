@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Comment.css';
 import axios from 'axios';
 import settings from '../../../settings.js';
+import showdown from 'showdown';
 
 class Comment extends Component {
     constructor(props) {
@@ -94,11 +95,18 @@ class Comment extends Component {
 
     render() {
         let comments;
+        let converter = new showdown.Converter()
+        commentsHTML = this.state.comments.map((comment, index) => (
+            converter.makeHtml(comment.content)
+        ))
+
+        console.log(commentsHTML);
+
         if (this.state.comments) {
-            comments = this.state.comments.map((comment) => (
+            comments = this.state.comments.map((comment, index) => (
                     <div className="comment">
                         <div className="author">{comment.author.username}</div>
-                        {comment.content}
+                        <div dangerouslySetInnerHTML={{__html: comments[i]}} />
                     </div>
                 ))
         }

@@ -1,0 +1,39 @@
+.news-show-main {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 0 0 20px 0;
+}
+
+.news-show-outpage-preview {
+    position: relative;
+    margin: 30px;    
+    width: 100%;
+}
+
+/* .img-test {
+    position: relative;
+    width: 35%;
+    background-image: url('https://i.imgur.com/tsK2Ymg.jpg');
+    background-position: center;
+    background-size: cover;
+} */
+
+.news-show-main-title {
+    margin: 50px 0;
+    font-weight: lighter;
+    font-size: 40px;
+    text-align: center;
+}
+
+.news-show-mainpage-preview {
+    position: relative;
+    margin: 30px;
+}
+
+.news-show-mainpage-preview-content {
+    margin: 20px;
+}
