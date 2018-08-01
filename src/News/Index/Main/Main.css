@@ -12,9 +12,13 @@
     display: flex;
 }
 
+.news-img-link {
+    width: 40%;    
+}
+
 .news-img {
     position: relative;
-    width: 40%;
+    width: 100%;
     height: 200px;
     background-position: center;
     background-size: cover;
@@ -26,11 +30,20 @@
     text-align: center;
 }
 
+.news-main .news-link {
+    text-decoration: none;
+    color: black;
+}
+
 .news-main .news-title {
     width: 100%;
     font-size: 25px;
 }
   
+.news-main .news-link:hover {
+    color: #81D8D0;
+}
+
 .news-main .news-content {
     width: 100%;
     line-height: 30px;

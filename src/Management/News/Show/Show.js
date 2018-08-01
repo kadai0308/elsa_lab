@@ -86,7 +86,7 @@ class newsShow extends Component {
             return ({
                 position: 'relative',
                 width: '35%',
-                backgroundImage: `url(${imageUrl})`,
+                backgroundImage: `url("${imageUrl}")`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
             })

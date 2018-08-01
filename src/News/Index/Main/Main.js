@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Main.css'
 import axios from 'axios';
-import settings from '../../settings.js'
+import settings from '../../../settings.js'
 
 class newsMain extends Component {
     constructor(props) {
@@ -34,12 +34,16 @@ class newsMain extends Component {
             newsHTML = this.state.news.map((n) => (
                 <div className="news-block" key={n.id}>
                     <div className="news-frame">
-                        <div className="news-img" style={{
-                            backgroundImage: 'url(' + n.image_url + ')',
-                        }}></div>
+                        <a href={"/news/" + n.id} className="news-img-link">
+                            <div className="news-img" style={{
+                                backgroundImage: 'url("' + n.image_url + '")',
+                            }}></div>
+                        </a>
                         <div className="news-main">
                             <div className="news-title">
-                                {n.title}
+                                <a href={"/news/" + n.id} className="news-link">
+                                    {n.title}
+                                </a>
                             </div>
                             <div className="news-content">
                                 {n.description}

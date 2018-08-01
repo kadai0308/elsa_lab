@@ -28,6 +28,7 @@ class Comment extends Component {
 
     renderCommentForm() {
         const token = localStorage.token;
+        // check login or not
         if (token) {
             return (
                 <div className="comment-form">
@@ -42,6 +43,11 @@ class Comment extends Component {
         }
     }
 
+    parseMetionTagInComment(content) {
+        const pattern = /\B@[a-z0-9_-]+/gi;
+        return content.match(pattern);
+    }
+
     loadComment() {
         // if login load all comments under this page
         const fileId = this.state.fileId
@@ -50,7 +56,6 @@ class Comment extends Component {
             baseURL: settings.backend_url,
             timeout: 1000,
         })
-
         ins.get('files/' + fileId + '/pages/' + nowPage)
         .then((res) => {
             console.log(res);
@@ -64,7 +69,14 @@ class Comment extends Component {
 
     handleChange(id, event) {
         if (id === 'q_content') {
-            this.setState({content: event.target.value});
+            this.setState({
+                content: event.target.value,
+                email_notify: {
+                    link: window.location.href,
+                    message_type: "course_file_comment_reply",
+                    mentions: this.parseMetionTagInComment(event.target.value)
+                }   
+            });
         }
     }
 
@@ -79,6 +91,7 @@ class Comment extends Component {
                 Authorization: "JWT " + token,
             }
         })
+        
         ins.post(`files/${fileId}/pages/${nowPage}`, this.state)
         .then((res) => {
             console.log(res)
@@ -115,14 +128,10 @@ class Comment extends Component {
             comments = this.state.comments.map((comment) => (
                     <div className="comment">
                         <div className="comment-author">
-                            {comment.author.username} ( {comment.author.profile.student_id} )
+                            {comment.author.profile.nick_name} ( {comment.author.profile.student_id} )
                         </div>
                         <div dangerouslySetInnerHTML={{__html: converter.makeHtml(comment.content)}} />
                         <div className="comment-time">at {this.timeFormat(comment.created_at)}</div>
-                        <div>
-                            {/* reply
-                            <textarea className="" name={comment.id} cols="30" rows="1" placeholder='' onKeyDown={this.newLine}></textarea> */}
-                        </div>
                     </div>
                 ))
         }

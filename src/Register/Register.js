@@ -48,6 +48,8 @@ class Register extends Component {
             this.setState({password: event.target.value});
         } else if (id === 'student_id') {
             this.setState({student_id: event.target.value});
+        } else if (id === 'nick_name') {
+            this.setState({nick_name: event.target.value});
         }
     }
 
@@ -57,6 +59,7 @@ class Register extends Component {
             username: this.state.account,
             password: this.state.password,
             student_id: this.state.student_id,
+            nick_name: this.state.nick_name,
         })
         .then(function (response) {
             console.log(response);
@@ -88,13 +91,16 @@ class Register extends Component {
                         <form onSubmit={this.handleSubmit}>
                             <div className="register-form-group">
                                 {this.validateEmailIcon()}
-                                <input className={'register-form-input ' + (this.validateEmail() ? '' : 'not-valid-input')} placeholder='Email' type="text" value={this.state.account} onChange={(e) => this.handleChange('account', e)} />
+                                <input required className={'register-form-input ' + (this.validateEmail() ? '' : 'not-valid-input')} placeholder='Email' type="text" value={this.state.account} onChange={(e) => this.handleChange('account', e)} />
+                            </div>
+                            <div className="register-form-group">
+                                <input required className='register-form-input' placeholder='Nick name' value={this.state.nick_name} onChange={(e) => this.handleChange('nick_name', e)} />
                             </div>
                             <div className="register-form-group">
                                 <input className='register-form-input' placeholder='Student ID ( optional )' value={this.state.student_id} onChange={(e) => this.handleChange('student_id', e)} />
                             </div>
                             <div className="register-form-group">
-                                <input className='register-form-input' placeholder='Password' type="password" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
+                                <input required className='register-form-input' placeholder='Password' type="password" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
                             </div>
                             <div className="register-form-group">
                                 <input className='register-form-button' type="submit" value="Submit" />
