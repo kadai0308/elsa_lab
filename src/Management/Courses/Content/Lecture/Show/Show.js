@@ -44,6 +44,7 @@ class lectureShow extends Component {
         const course_id = this.props.params.course_id
         const content_id = this.props.params.content_id
         const lecture_id = this.props.params.lecture_id
+        // sweet alert
         swal({
           title: 'Are you sure?',
           type: 'warning',

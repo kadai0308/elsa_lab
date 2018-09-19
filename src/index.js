@@ -33,6 +33,8 @@ import publicationNew from './Management/Publications/New/New'
 import publicationShow from './Management/Publications/Show/Show'
 import publicationEdit from './Management/Publications/Edit/Edit'
 
+import homeSetting from './Management/HomePage/Index'
+
 import userIndex from './Management/Users/Index/Index'
 import userNew from './Management/Users/New/New'
 import userShow from './Management/Users/Show/Show'
@@ -76,6 +78,7 @@ ReactDOM.render((
       <Route path="/management/publications/new" component={publicationNew} />
       <Route path="/management/publications/:publication_id" component={publicationShow} />
       <Route path="/management/publications/:publication_id/edit" component={publicationEdit} />
+      <Route path="/management/home_setting" component={homeSetting} />
       <Route path="/management/users" component={userIndex} />
       <Route path="/management/user/new" component={userNew} />
       <Route path="/management/user/:user_id" component={userShow} />

@@ -43,6 +43,7 @@ class Comment extends Component {
         }
     }
 
+    // parse @ 被 tag 的人
     parseMetionTagInComment(content) {
         const pattern = /\B@[a-z0-9_-]+/gi;
         return content.match(pattern);
